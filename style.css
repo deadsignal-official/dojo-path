@@ -1,0 +1,266 @@
+/* ===== RESET & BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0a;
+    --surface: #141414;
+      --surface2: #1e1e1e;
+        --accent: #c8102e;
+          --accent2: #ff3c5a;
+            --gold: #d4a017;
+              --text: #f0f0f0;
+                --text-muted: #888888;
+                  --border: #2a2a2a;
+                    --radius: 14px;
+                    }
+
+                    body {
+                      background: var(--bg);
+                        color: var(--text);
+                          font-family: 'Segoe UI', sans-serif;
+                            min-height: 100vh;
+                              padding-bottom: 80px;
+                                overflow-x: hidden;
+                                }
+
+                                /* ===== PAGES ===== */
+                                .page { display: none; padding: 20px 16px; }
+                                .page.active { display: block; }
+
+                                /* ===== BOTTOM NAV ===== */
+                                .bottom-nav {
+                                  position: fixed;
+                                    bottom: 0; left: 0; right: 0;
+                                      background: #111111;
+                                        border-top: 1px solid var(--border);
+                                          display: flex;
+                                            justify-content: space-around;
+                                              align-items: center;
+                                                height: 70px;
+                                                  z-index: 999;
+                                                  }
+
+                                                  .nav-btn {
+                                                    background: none;
+                                                      border: none;
+                                                        color: var(--text-muted);
+                                                          display: flex;
+                                                            flex-direction: column;
+                                                              align-items: center;
+                                                                gap: 3px;
+                                                                  padding: 8px 12px;
+                                                                    cursor: pointer;
+                                                                      transition: color 0.2s;
+                                                                      }
+
+                                                                      .nav-btn.active { color: var(--accent); }
+                                                                      .nav-icon { font-size: 22px; }
+                                                                      .nav-label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; }
+
+                                                                      /* ===== HEADER ===== */
+                                                                      .page-header {
+                                                                        margin-bottom: 24px;
+                                                                        }
+
+                                                                        .page-header h1 {
+                                                                          font-size: 28px;
+                                                                            font-weight: 800;
+                                                                              letter-spacing: -0.5px;
+                                                                              }
+
+                                                                              .page-header p {
+                                                                                color: var(--text-muted);
+                                                                                  font-size: 13px;
+                                                                                    margin-top: 4px;
+                                                                                    }
+
+                                                                                    .accent { color: var(--accent); }
+                                                                                    .gold { color: var(--gold); }
+
+                                                                                    /* ===== CARDS ===== */
+                                                                                    .card {
+                                                                                      background: var(--surface);
+                                                                                        border: 1px solid var(--border);
+                                                                                          border-radius: var(--radius);
+                                                                                            padding: 18px;
+                                                                                              margin-bottom: 14px;
+                                                                                              }
+
+                                                                                              .card-title {
+                                                                                                font-size: 12px;
+                                                                                                  font-weight: 700;
+                                                                                                    letter-spacing: 1px;
+                                                                                                      text-transform: uppercase;
+                                                                                                        color: var(--text-muted);
+                                                                                                          margin-bottom: 10px;
+                                                                                                          }
+
+                                                                                                          /* ===== BUTTONS ===== */
+                                                                                                          .btn {
+                                                                                                            background: var(--accent);
+                                                                                                              color: #fff;
+                                                                                                                border: none;
+                                                                                                                  border-radius: 10px;
+                                                                                                                    padding: 12px 20px;
+                                                                                                                      font-size: 14px;
+                                                                                                                        font-weight: 700;
+                                                                                                                          cursor: pointer;
+                                                                                                                            width: 100%;
+                                                                                                                              margin-top: 10px;
+                                                                                                                                transition: background 0.2s;
+                                                                                                                                }
+
+                                                                                                                                .btn:active { background: var(--accent2); }
+
+                                                                                                                                .btn-ghost {
+                                                                                                                                  background: var(--surface2);
+                                                                                                                                    color: var(--text);
+                                                                                                                                      border: 1px solid var(--border);
+                                                                                                                                      }
+
+                                                                                                                                      /* ===== BELT COLORS ===== */
+                                                                                                                                      .belt-white   { background: #ffffff; color: #000; }
+                                                                                                                                      .belt-yellow  { background: #f5c518; color: #000; }
+                                                                                                                                      .belt-orange  { background: #e87722; color: #fff; }
+                                                                                                                                      .belt-green   { background: #2d8a4e; color: #fff; }
+                                                                                                                                      .belt-blue    { background: #1a4fa0; color: #fff; }
+                                                                                                                                      .belt-purple  { background: #6b3fa0; color: #fff; }
+                                                                                                                                      .belt-brown   { background: #7b4e2d; color: #fff; }
+                                                                                                                                      .belt-black   { background: #111111; color: #fff; border: 1px solid #444; }
+
+                                                                                                                                      .belt-badge {
+                                                                                                                                        display: inline-block;
+                                                                                                                                          padding: 4px 14px;
+                                                                                                                                            border-radius: 20px;
+                                                                                                                                              font-size: 13px;
+                                                                                                                                                font-weight: 700;
+                                                                                                                                                }
+
+                                                                                                                                                /* ===== PROGRESS BAR ===== */
+                                                                                                                                                .progress-bar {
+                                                                                                                                                  background: var(--surface2);
+                                                                                                                                                    border-radius: 20px;
+                                                                                                                                                      height: 10px;
+                                                                                                                                                        overflow: hidden;
+                                                                                                                                                          margin-top: 8px;
+                                                                                                                                                          }
+
+                                                                                                                                                          .progress-fill {
+                                                                                                                                                            height: 100%;
+                                                                                                                                                              background: linear-gradient(90deg, var(--accent), var(--accent2));
+                                                                                                                                                                border-radius: 20px;
+                                                                                                                                                                  transition: width 0.4s ease;
+                                                                                                                                                                  }
+
+                                                                                                                                                                  /* ===== TIMER ===== */
+                                                                                                                                                                  .timer-display {
+                                                                                                                                                                    font-size: 72px;
+                                                                                                                                                                      font-weight: 900;
+                                                                                                                                                                        text-align: center;
+                                                                                                                                                                          letter-spacing: -2px;
+                                                                                                                                                                            color: var(--text);
+                                                                                                                                                                              margin: 20px 0;
+                                                                                                                                                                              }
+
+                                                                                                                                                                              .timer-row {
+                                                                                                                                                                                display: flex;
+                                                                                                                                                                                  gap: 10px;
+                                                                                                                                                                                  }
+
+                                                                                                                                                                                  .timer-row .btn { flex: 1; }
+
+                                                                                                                                                                                  /* ===== TECHNIQUE LIST ===== */
+                                                                                                                                                                                  .tech-item {
+                                                                                                                                                                                    background: var(--surface);
+                                                                                                                                                                                      border: 1px solid var(--border);
+                                                                                                                                                                                        border-radius: var(--radius);
+                                                                                                                                                                                          padding: 16px;
+                                                                                                                                                                                            margin-bottom: 10px;
+                                                                                                                                                                                              display: flex;
+                                                                                                                                                                                                align-items: center;
+                                                                                                                                                                                                  gap: 14px;
+                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                  .tech-icon {
+                                                                                                                                                                                                    font-size: 28px;
+                                                                                                                                                                                                      min-width: 40px;
+                                                                                                                                                                                                        text-align: center;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        .tech-name {
+                                                                                                                                                                                                          font-size: 15px;
+                                                                                                                                                                                                            font-weight: 700;
+                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                            .tech-sub {
+                                                                                                                                                                                                              font-size: 12px;
+                                                                                                                                                                                                                color: var(--text-muted);
+                                                                                                                                                                                                                  margin-top: 2px;
+                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                  /* ===== LOG ===== */
+                                                                                                                                                                                                                  .log-item {
+                                                                                                                                                                                                                    background: var(--surface);
+                                                                                                                                                                                                                      border-left: 3px solid var(--accent);
+                                                                                                                                                                                                                        border-radius: 0 var(--radius) var(--radius) 0;
+                                                                                                                                                                                                                          padding: 14px;
+                                                                                                                                                                                                                            margin-bottom: 10px;
+                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                            .log-date {
+                                                                                                                                                                                                                              font-size: 11px;
+                                                                                                                                                                                                                                color: var(--text-muted);
+                                                                                                                                                                                                                                  margin-bottom: 4px;
+                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                  .log-title {
+                                                                                                                                                                                                                                    font-size: 15px;
+                                                                                                                                                                                                                                      font-weight: 700;
+                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                      /* ===== INPUT ===== */
+                                                                                                                                                                                                                                      input, textarea, select {
+                                                                                                                                                                                                                                        background: var(--surface2);
+                                                                                                                                                                                                                                          border: 1px solid var(--border);
+                                                                                                                                                                                                                                            border-radius: 10px;
+                                                                                                                                                                                                                                              color: var(--text);
+                                                                                                                                                                                                                                                padding: 12px 14px;
+                                                                                                                                                                                                                                                  font-size: 14px;
+                                                                                                                                                                                                                                                    width: 100%;
+                                                                                                                                                                                                                                                      margin-top: 8px;
+                                                                                                                                                                                                                                                        outline: none;
+                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                        input:focus, textarea:focus {
+                                                                                                                                                                                                                                                          border-color: var(--accent);
+                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                          /* ===== STAT GRID ===== */
+                                                                                                                                                                                                                                                          .stat-grid {
+                                                                                                                                                                                                                                                            display: grid;
+                                                                                                                                                                                                                                                              grid-template-columns: 1fr 1fr;
+                                                                                                                                                                                                                                                                gap: 12px;
+                                                                                                                                                                                                                                                                  margin-bottom: 14px;
+                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                  .stat-box {
+                                                                                                                                                                                                                                                                    background: var(--surface);
+                                                                                                                                                                                                                                                                      border: 1px solid var(--border);
+                                                                                                                                                                                                                                                                        border-radius: var(--radius);
+                                                                                                                                                                                                                                                                          padding: 16px;
+                                                                                                                                                                                                                                                                            text-align: center;
+                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                            .stat-number {
+                                                                                                                                                                                                                                                                              font-size: 32px;
+                                                                                                                                                                                                                                                                                font-weight: 900;
+                                                                                                                                                                                                                                                                                  color: var(--accent);
+                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                  .stat-label {
+                                                                                                                                                                                                                                                                                    font-size: 11px;
+                                                                                                                                                                                                                                                                                      color: var(--text-muted);
+                                                                                                                                                                                                                                                                                        margin-top: 4px;
+                                                                                                                                                                                                                                                                                          text-transform: uppercase;
+                                                                                                                                                                                                                                                                                            letter-spacing: 0.5px;
+                                                                                                                                                                                                                                                                                            }

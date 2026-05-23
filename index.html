@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0a0a0a" />
+        <title>Dojo Path</title>
+          <link rel="manifest" href="manifest.json" />
+            <link rel="stylesheet" href="style.css" />
+            </head>
+            <body>
+
+              <!-- NAV BAR BOTTOM -->
+                <nav class="bottom-nav">
+                    <button class="nav-btn active" onclick="showPage('dashboard')">
+                          <span class="nav-icon">🏠</span>
+                                <span class="nav-label">Home</span>
+                                    </button>
+                                        <button class="nav-btn" onclick="showPage('belts')">
+                                              <span class="nav-icon">🥋</span>
+                                                    <span class="nav-label">Banden</span>
+                                                        </button>
+                                                            <button class="nav-btn" onclick="showPage('techniques')">
+                                                                  <span class="nav-icon">👊</span>
+                                                                        <span class="nav-label">Technieken</span>
+                                                                            </button>
+                                                                                <button class="nav-btn" onclick="showPage('timer')">
+                                                                                      <span class="nav-icon">⏱️</span>
+                                                                                            <span class="nav-label">Timer</span>
+                                                                                                </button>
+                                                                                                    <button class="nav-btn" onclick="showPage('log')">
+                                                                                                          <span class="nav-icon">📋</span>
+                                                                                                                <span class="nav-label">Log</span>
+                                                                                                                    </button>
+                                                                                                                      </nav>
+
+                                                                                                                        <!-- PAGES -->
+                                                                                                                          <div id="dashboard" class="page active"></div>
+                                                                                                                            <div id="belts" class="page"></div>
+                                                                                                                              <div id="techniques" class="page"></div>
+                                                                                                                                <div id="timer" class="page"></div>
+                                                                                                                                  <div id="log" class="page"></div>
+
+                                                                                                                                    <script src="app.js"></script>
+                                                                                                                                    </body>
+                                                                                                                                    </html>
