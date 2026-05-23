@@ -41,6 +41,11 @@
                                                                                                                                 <div id="timer" class="page"></div>
                                                                                                                                   <div id="log" class="page"></div>
 
-                                                                                                                                    <script src="app.js"></script>
+                                                                                                                                    <script>
+                                                                                                                                          if ('serviceWorker' in navigator) {
+                                                                                                                                                navigator.serviceWorker.register('/dojo-path/sw.js');
+                                                                                                                                                    }
+                                                                                                                                                      </script>
+                                                                                                                                                        <script src="app.js"></script>
                                                                                                                                     </body>
                                                                                                                                     </html>
